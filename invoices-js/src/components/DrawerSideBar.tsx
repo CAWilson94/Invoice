@@ -4,7 +4,7 @@ import Drawer from '@mui/material/Drawer';
 const drawerWidth = 240;
 
 export default function DrawerSideBar() {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
