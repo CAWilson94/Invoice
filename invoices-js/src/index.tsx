@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./components/App";
+import App from "./app/App";
 import reportWebVitals from "./reportWebVitals";
-import store from "./store";
+import { store } from "./app/store";
 import { Provider } from "react-redux";
 
 import "@fontsource/roboto/300.css";
