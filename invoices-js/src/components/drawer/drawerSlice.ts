@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface DrawerState {
-  value: boolean; // want this to represent closed or open
+  value: boolean; 
 }
 
 const initialState: DrawerState = {
@@ -10,21 +10,16 @@ const initialState: DrawerState = {
 
 export const drawerSlice = createSlice({
   name: 'drawer',
-  initialState,
+  initialState: initialState,
   reducers: {
-    openDrawer: (state: { value: boolean }) => {
-      state.value = true;
-    },
-    closeDrawer: (state: { value: boolean }) => {
-      state.value = false;
-    },
-    openCloseDrawer: (state: { value: boolean}, action: PayloadAction<boolean>)=>{ 
-        state.value = action.payload; 
-    }
+    drawerToggle: (state:{value:boolean})=>{      
+      state.value = !state.value;              
+    },        
   },
 });
 
 // Action creators generated for each case reducer function 
-export const {openDrawer, closeDrawer, openCloseDrawer} = drawerSlice.actions
+export const {drawerToggle} = drawerSlice.actions
+export const drawerSelector = (state: { drawer: { value: boolean; }; }) => state.drawer.value
 
 export default drawerSlice.reducer

@@ -1,40 +1,28 @@
 import * as React from "react";
-import { RootState } from '../../app/store'
-import { useSelector, useDispatch } from 'react-redux'
-import Drawer from '@mui/material/Drawer';
+import { drawerSelector} from "../drawer/drawerSlice";
+import { useSelector, useDispatch } from "react-redux";
+import Drawer from "@mui/material/Drawer";
+import { breakpoints } from "@mui/system";
 
 const drawerWidth = 240;
 
 export default function DrawerSideBar() {
-  const count = useSelector((state: RootState) => state.drawer.value)
-  const dispatch = useDispatch()
-
-  const [open, setOpen] = React.useState(false);
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  const drawer = useSelector(drawerSelector); // if you read this value do you ever need to write back? no?
+  //const dispatch = useDispatch();  
 
   return (
     <Drawer
-    sx={{
+      sx={{
         width: drawerWidth,
         flexShrink: 0,
-        '& .MuiDrawer-paper': {
+        "& .MuiDrawer-paper": {
           width: drawerWidth,
-          boxSizing: 'border-box',
+          boxSizing: "border-box",
         },
       }}
-
       variant="persistent"
       anchor="left"
-      open={open}
-       // should be set to true for testing
+      open={drawer}      
     ></Drawer>
-    
   );
 }

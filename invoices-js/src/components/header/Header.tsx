@@ -1,9 +1,16 @@
+import * as React from "react";
 import { AppBar, Box, Toolbar, Button } from "@material-ui/core";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { RootState } from "../../app/store";
+import { useSelector, useDispatch } from "react-redux";
+import { drawerToggle, drawerSelector} from "../drawer/drawerSlice";
 
 export default function headerAppBar() {
+  const drawerState = useSelector(drawerSelector)
+  const dispatch = useDispatch()
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -14,6 +21,7 @@ export default function headerAppBar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            onClick={() => dispatch(drawerToggle())} // maybe pass the state in here? 
           >
             <MenuIcon />
           </IconButton>
