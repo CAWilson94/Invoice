@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { RootState } from "../../app/store";
 import { useSelector, useDispatch } from "react-redux";
-import { drawerToggle, drawerSelector} from "../drawer/drawerSlice";
+import { drawerToggle, drawerSelector, openDrawer} from "../drawer/drawerSlice";
 
 export default function headerAppBar() {
   const drawerState = useSelector(drawerSelector)
@@ -21,7 +21,7 @@ export default function headerAppBar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-            onClick={() => dispatch(drawerToggle())} // maybe pass the state in here? 
+            onClick={() => dispatch(openDrawer())} // maybe pass the state in here? 
           >
             <MenuIcon />
           </IconButton>
