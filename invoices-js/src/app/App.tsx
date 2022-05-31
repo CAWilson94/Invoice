@@ -19,10 +19,10 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function App() {
   return (
-    <Box>
+    <Box sx={{flexGrow: 1}}>
       <Header />
       <DrawerSideBar />
-      <Stack direction="row" spacing={2} justifyContent="space-evenly" sx={{marginTop: 10, p: 2}}>
+      <Stack direction="row" spacing={2} justifyContent="space-evenly">
         <Item>Empty Left Content</Item>
         <Item sx={{ flex: 4, p: 10 }}>Central Content</Item>
         <Box sx={{p: 10}}>
