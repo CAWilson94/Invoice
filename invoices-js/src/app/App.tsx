@@ -6,7 +6,7 @@ import Paper from "@mui/material/Paper";
 import DrawerSideBar from "../components/drawer/DrawerSideBar";
 import { Stack } from "@mui/material";
 import Box from "@mui/material/Box";
-import FloatingButton from "../components/FloatingButton";
+import FloatingButton from "../components/floatingButton/FloatingButton";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
