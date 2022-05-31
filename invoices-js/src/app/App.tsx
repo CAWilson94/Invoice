@@ -22,10 +22,11 @@ function App() {
       <Header />
       <DrawerSideBar />
       <Stack direction="row" spacing={2} justifyContent="space-evenly">
-        <Item>Empty Left Content</Item>
-        <Item sx={{ flex: 4, p: 10 }}>Central Content</Item>
-        <FloatingButton/>
+        <Item sx={{ flex: 1, p: 10 }}>Empty Left Content</Item>
+        <Item sx={{ flex: 5, p: 10 }}>Central Content</Item>        
+        <Item sx={{ flex: 1, p: 10 }}>Empty Right Content</Item>
       </Stack>
+      <FloatingButton/>
     </Box>
   );
 }
