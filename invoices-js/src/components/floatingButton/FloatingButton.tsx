@@ -5,7 +5,7 @@ import { Box } from "@mui/system";
 
 export default function FloatingButton(){ 
     return(
-        <Box sx={{position: 'absolute', bottom: 10, right: 10, padding: 10}}>
+        <Box sx={{position: 'absolute', bottom: 56, right: 56}}>
         <Fab color="primary" aria-label="add">
             <AddIcon />
           </Fab>

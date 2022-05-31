@@ -21,10 +21,10 @@ function App() {
     <Box sx={{flexGrow: 1}}>
       <Header />
       <DrawerSideBar />
-      <Stack direction="row" spacing={2} justifyContent="space-evenly" sx={{marginTop: 2}}>
-        <Item sx={{ flex: 1, p: 10 }}>Empty Left Content</Item>
-        <Item sx={{ flex: 5, p: 10 }}>Central Content</Item>        
-        <Item sx={{ flex: 1, p: 10 }}>Empty Right Content</Item>
+      <Stack direction="row" justifyContent="space-between" sx={{marginTop: 2}}>
+        <Item sx={{ flex: 1, p: 10, display: {xs: "none", sm: "block"}}}>Empty Left Content</Item>
+        <Item sx={{ flex: 5, p: 20}}>Central Content</Item>        
+        <Item sx={{ flex: 1, p: 10, display: {xs: "none", sm: "block"}}}>Empty Right Content</Item>
       </Stack>
       <FloatingButton/>
     </Box>
