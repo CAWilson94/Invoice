@@ -21,7 +21,7 @@ export default function headerAppBar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-            onClick={() => dispatch(openDrawer())} // maybe pass the state in here? 
+            onClick={() => dispatch(openDrawer())}
           >
             <MenuIcon />
           </IconButton>
